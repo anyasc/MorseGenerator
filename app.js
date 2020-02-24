@@ -1,7 +1,9 @@
 let lights = document.querySelector('#morse-img');
-const onSrc = "/img/on.png";
-const offSrc = "/img/off.png";
+const onSrc = "./img/on.png";
+const offSrc = "./img/off.png";
 const text = document.querySelector('#enter-text');
+const original = document.querySelector('#original');
+const ditDat = document.querySelector("#morse");
 document.querySelector("#translate").addEventListener("click", translate);
 
 const morse = {
@@ -46,16 +48,21 @@ const morse = {
 
 function translate() {
   let result = "";
+  let showResult = result;
   console.log(text.value);
   let sentText = text.value.toLowerCase();
   let textArr = sentText.split(" ")
-  text.value = '';
   textArr.forEach(function(word){
-    word.split('').forEach((letter) => result += (morse[letter] + ","))
+    word.split('').forEach((letter) => result += (morse[letter] + ","));
+    word.split('').forEach((letter) => showResult += (morse[letter] + ' '));
     result += ' ';
+    showResult += ' ';
   }
   )
-  console.log(result);
+  original.textContent = text.value;
+  ditDat.textContent = showResult;
+  text.value = '';
+  console.log(showResult)
   blink(result);
 }
 

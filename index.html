@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>MorseGenerator</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1 class="title">Gerador de Código Morse</h1>
+  <h1 class="title">Morse Generator</h1>
   <div class="img-container">
     <img src="./img/off.png" alt="Lights on" id="morse-img">
   </div>
@@ -15,12 +15,12 @@
     <label for='text-input'>Entre com o texto a ser transformado em código morse:</label>
     <div>
       <textarea id="enter-text"></textarea>
-      <div class="btn" id="translate">Translate</div>
+      <a class="btn" id="translate">Translate</a>
     </div>
   </div>
   <div class="result">
-    <p class="original"></p>
-    <p class="morse"></p>
+    <p id="original"></p>
+    <p id="morse"></p>
   </div>
   <!-- <form id="generate-morse" action="">
     <div class="input-field">
