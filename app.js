@@ -62,9 +62,10 @@ function translate() {
   original.textContent = text.value;
   ditDat.textContent = showResult;
   text.value = '';
-  console.log(showResult)
   blink(result);
 }
+
+
 
 function blink(str) {
   let time = 0;

@@ -4,33 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MorseGenerator</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1 class="title">Morse Generator</h1>
-  <div class="img-container">
-    <img src="./img/off.png" alt="Lights on" id="morse-img">
-  </div>
-  <div class="input-container">
-    <label for='text-input'>Entre com o texto a ser transformado em código morse:</label>
-    <div>
-      <textarea id="enter-text"></textarea>
-      <a class="btn" id="translate">Translate</a>
+  <div class="container">
+
+    <h1 class="title">Morse Generator</h1>
+
+    <div class="img-container">
+      <img src="./img/off.png" alt="Lights on" id="morse-img">
     </div>
-  </div>
-  <div class="result">
-    <p id="original"></p>
-    <p id="morse"></p>
-  </div>
-  <!-- <form id="generate-morse" action="">
-    <div class="input-field">
-      <input type="text" id="enter-text" pattern="[a-zA-Z0-9-]+">
+    
+    <div class="input-container">
+      <label for='text-input'>Entre com o texto a ser transformado em código morse:</label>
+      <div>
+        <textarea id="enter-text"></textarea>
+      </div>
     </div>
-    <div class="btn" id="translate">Translate</div>
-  </form> -->
+    
+    <div class="btn-container">
+      <a class="btn" id="translate">Morse!</a>
+    </div>
+    
+    <div class="result">
+      <p id="original"></p>
+      <p id="morse"></p>
+    </div>
   
-
-
+  </div>
+  
   
   <script type="text/javascript" src="app.js"></script>
   
