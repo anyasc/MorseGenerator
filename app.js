@@ -49,7 +49,6 @@ const morse = {
 function translate() {
   let result = "";
   let showResult = result;
-  console.log(text.value);
   let sentText = text.value.toLowerCase();
   let textArr = sentText.split(" ")
   textArr.forEach(function(word){

@@ -6,10 +6,24 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10vw 50vw 30vw 10vw;
-      grid-template-columns: 10vw 50vw 30vw 10vw;
+  -ms-grid-columns: 5vw 60vw 30vw 5vw;
+      grid-template-columns: 5vw 60vw 30vw 5vw;
   -ms-grid-rows: auto auto auto auto;
       grid-template-rows: auto auto auto auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    -ms-grid-columns: 10vw 50vw 30vw 5vw;
+        grid-template-columns: 10vw 50vw 30vw 5vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    -ms-grid-columns: 120px 600px 360px auto;
+        grid-template-columns: 120px 600px 360px auto;
+  }
 }
 
 .container .title {
@@ -24,7 +38,6 @@ body {
 }
 
 .container .img-container {
-  width: 100vw;
   margin: 0 auto;
   -ms-grid-column: 2;
       grid-column-start: 2;
@@ -35,7 +48,7 @@ body {
 }
 
 .container .img-container img {
-  max-width: 100%;
+  max-width: 50vw;
   max-height: 60vh;
 }
 
@@ -46,6 +59,11 @@ body {
   -ms-grid-row: 3;
       grid-row-start: 3;
   grid-row-end: 4;
+}
+
+.container .input-container textarea {
+  margin: 10px;
+  width: 90%;
 }
 
 .container .btn-container {
@@ -83,5 +101,16 @@ body {
   -ms-grid-row: 4;
       grid-row-start: 4;
   grid-row-end: 5;
+}
+
+@media (min-width: 768px) {
+  .container .result {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 4;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

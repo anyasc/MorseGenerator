@@ -1,3 +1,23 @@
+@mixin sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+
+
 body {
   background-color: #002;
   color: rgb(170, 171, 172);
@@ -5,8 +25,14 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 10vw 50vw 30vw 10vw;
+  grid-template-columns: 5vw 60vw 30vw 5vw;
   grid-template-rows: auto auto auto auto;
+  @include sm {
+    grid-template-columns: 10vw 50vw 30vw 5vw;
+  } 
+  @include lg {
+    grid-template-columns: 120px 600px 360px auto;
+  }
 
   .title {
     grid-column-start: 2;
@@ -17,7 +43,6 @@ body {
   }
 
   .img-container {
-    width: 100vw;
     margin: 0 auto;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -25,7 +50,7 @@ body {
     grid-row-end: 3;
 
     img {
-      max-width: 100%;
+      max-width: 50vw;
       max-height: 60vh;
     }
   }
@@ -35,6 +60,11 @@ body {
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
+
+    textarea {
+      margin: 10px;
+      width: 90%;
+    }
   }
 
   .btn-container {
@@ -67,5 +97,12 @@ body {
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
+
+    @include md {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
   }
 }
